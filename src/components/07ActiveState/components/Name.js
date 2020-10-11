@@ -2,8 +2,9 @@ import React from 'react';
 import style from './Name.module.css';
 
 export const Name = (props) => {
-  const { name } = props;
+  const { name, makeNameActive, active, list, id } = props;
+  console.log(style);
   return (
-    <div className={style.notActive}>{name}</div>
+    <div id={id} onClick={makeNameActive} className={active === id ? style.active : style.notActive}> {name}</div>
   );
 };
